@@ -44,11 +44,11 @@ class _Swish(torch.autograd.Function):
         return grad_output * (sigmoid_i * (1 + i * (1 - sigmoid_i)))
 
 
-class Swish(nn.Module):
-    """Module using custom implementation."""
-
-    def forward(self, input_tensor):
-        return _Swish.apply(input_tensor)
+# class Swish(nn.Module):
+#     """Module using custom implementation."""
+# 
+#     def forward(self, input_tensor):
+#         return _Swish.apply(input_tensor)
 
 
 class _Block(nn.Module):
