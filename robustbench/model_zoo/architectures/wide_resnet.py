@@ -23,9 +23,10 @@ class BasicBlock(nn.Module):
     def forward(self, x):
         if not self.equalInOut:
             x = self.relu1(self.bn1(x))
+            out = self.relu2(self.bn2(self.conv1(x)))
         else:
             out = self.relu1(self.bn1(x))
-        out = self.relu2(self.bn2(self.conv1(out if self.equalInOut else x)))
+            out = self.relu2(self.bn2(self.conv1(out)))
         if self.droprate > 0:
             out = F.dropout(out, p=self.droprate, training=self.training)
         out = self.conv2(out)
