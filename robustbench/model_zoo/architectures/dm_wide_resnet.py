@@ -48,7 +48,8 @@ class Swish(nn.Module):
     """Module using custom implementation."""
 
     def forward(self, input_tensor):
-        return _Swish.apply(input_tensor)
+        return input_tensor * torch.sigmoid(input_tensor)
+        # return _Swish.apply(input_tensor)
 
 
 class _Block(nn.Module):
