@@ -708,6 +708,14 @@ linf = OrderedDict([
         'model': rebuffi_sodef,
         'gdrive_id': '1-HjG9f7wJDnNRdMQSiz8dlCI3sq5mfqj',
     }),
+    ('Jia2022LAS-AT_34_10', {
+        'model': lambda: WideResNet(depth=34, widen_factor=10),
+        'gdrive_id': '1-3l7xKhIPyes3O4QSz0HU6L-hfOoS0xD',
+    }),
+    ('Jia2022LAS-AT_70_16', {
+        'model': lambda: WideResNet(depth=70, widen_factor=16),
+        'gdrive_id': '1-4p-Gr0hjl8wq6qvvTza4x4a5Rmu-Bfr',
+    }),
     ('Pang2022Robustness_WRN28_10', {
         'model':
         lambda: DMWideResNet(num_classes=10,
@@ -727,7 +735,15 @@ linf = OrderedDict([
                              mean=CIFAR10_MEAN,
                              std=CIFAR10_STD),
         'gdrive_id': '1uQZYUuUiL9BzaQUeXLhjr_RhoyFRrHe3'
-    })
+    }),
+    ('Addepalli2022Efficient_RN18', {
+        'model': ResNet18,
+        'gdrive_id': '1m5vhdzIUUKhDbsZdOG9z76Eyp6f4xe_f',
+    }),
+    ('Addepalli2022Efficient_WRN_34_10', {
+        'model': lambda: WideResNet(depth=34, widen_factor=10),
+        'gdrive_id': '1--dVDtZhAk4D2zMtTDwIGnImuCGxTcBA',
+    }),
 ])
 
 l2 = OrderedDict([
@@ -942,6 +958,10 @@ common_corruptions = OrderedDict([
     ('Modas2021PRIMEResNet18', {
         'model': Modas2021PRIMEResNet18,
         'gdrive_id': '13oDyqi16FeXy5j4Vm6IghnjTVqp_XF5U'
+    }),
+    ('Addepalli2022Efficient_WRN_34_10', {
+        'model': lambda: WideResNet(depth=34, widen_factor=10),
+        'gdrive_id': '1--dVDtZhAk4D2zMtTDwIGnImuCGxTcBA',
     }),
 ])
 
